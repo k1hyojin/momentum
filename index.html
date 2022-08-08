@@ -1,12 +1,121 @@
+<?php
+$v = date("YmdHis");
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet"  href="./css/style.css?v=<?php echo $v ?>" >
+    <title>MOMENTUM</title>
 </head>
 <body>
-    제발되라
-</body>
+    <form id="login-form" >
+        <div class="username">
+            <span>USERNAME </span>
+            <span>
+                <input type="text" class="userinput" required maxlength="10">
+                <button type="submit" class="userbutton">GO</button>
+            </span>
+        </div>
+    </form>
+    <div id="box" class="hidden">
+        <div class="container">
+            <header>
+                <div id="logout">LOGOUT</div>
+                <div>
+                    <h3 id="quote"></h3>
+                </div>
+            </header>
+            <nav>
+                <ul>
+                    <li>Welcome!</li>
+                    <li><span>Have a lovely day!</span> <span id="greeting"></span></li>
+                </ul>
+            </nav>
+            <section class="weather">
+                <div id="weather">
+                    <span></span>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </section>
+            <section class="music">
+                <div>
+                    <span id="cover"></span>
+                    <ul id="music">
+                        <li>
+                            <span></span>
+                            <span></span>
+                            <input type="range" class="musicbar">
+                            <em></em>
+                            <em></em>
+                        </li>
+                        <li class="rewind"></li>
+                        <li class="play"></li>
+                        <li class="forward"></li>
+                    </ul>
+                </div>
+            </section>
+            <main>
+                <div>
+                    <h2>✔︎ TO DO LIST</h2>
+                    <ul id="todo-list"></ul>
+                    <form id="todo-form">
+                        <span>
+                            <input type="text" maxlength="16"  placeholder="Enter Your Things to Do">
+                        </span>
+                    </form>
+                    </div>
+            </main>
+            <section class="clock">
+                <ul id="clock">
+                    <li></li>
+                    <li></li>
+                    <li>
+                        <div>
+                            <span></span>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <footer>
+                <ul id="bookmarks">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </footer>
+        </div>
+    </div>
+    <!-- <h2 id="clock">00 : 00 : 00</h2>
+    <form id="login-form" class="hidden">
+        <input type="text" placeholder = "what is your name?" required maxlength="15">
+        <input type="submit" value="LogIn">
+    </form>
+    <h1 id="greeting" class="hidden"></h1>
+    <form id="todo-form">
+        <input type="text" placeholder="Write a ToDo and Press Enter" required>
+    </form>
+    <ul id="todo-list"></ul>
+    <div id="quote">
+        <span></span>
+        <span></span>
+    </div>
+    <div id="weather">
+        <span></span>
+        <span></span>
+    </div> -->
+    <script src="js/quote.js?v=<?php echo $v ?>"></script>
+    <script src="js/music.js?v=<?php echo $v ?>"></script>
+    <script src="./js/clock.js?v=<?php echo $v ?>"></script>
+    <script src="./js/todo.js?v=<?php echo $v ?>"></script>
+    <script src="./js/app.js?v=<?php echo $v ?>"></script>
+    <script src="./js/weather.js?v=<?php echo $v ?>"></script>
+    </body>
 </html>
